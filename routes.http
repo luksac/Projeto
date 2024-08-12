@@ -1,0 +1,72 @@
+POST http://localhost:3333/restaurants HTTP/1.1
+content-type : application/json
+
+
+{
+    "RestauranteID" : 5,
+    "Descricao" : "Universidade",
+    "Tipo"  : "Fast Food",
+    "NotaUsuarios" : 3.7,
+    "Endereco" : "Rua Macial, 900",
+    "Telefone" : "4444-4444",
+    "FotosRestaurante"  : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/37/b8/a1/ranning-sushi-pas.jpg?w=600&h=400&s=1"
+}
+
+###
+
+GET http://localhost:3333/restaurants
+
+
+###
+
+POST http://localhost:3333/login
+
+{
+    "user" : "user",
+    "password" : "password"
+}
+
+### 
+
+
+
+PUT  http://localhost:3333/restaurants/4 HTTP/1.1
+content-type : application/json
+
+
+ {
+    "descricao": "Hamburgueria Complexa",
+    "tipo": "Fast Food",
+    "notausuarios": 4.7,
+    "endereco": "Rua Macial, 50",
+    "telefone": "4444-4444",
+    "fotosrestaurante": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/c8/8d/9e/tonton-sam.jpg?w=600&h=400&s=1"
+}
+
+
+
+###
+
+POST http://localhost:3333/register
+content-type : application/json
+
+
+{
+    "usuarioid" : 2,
+    "nome" : "Fred",
+    "login" : "fred@graodireto.com.br",
+    "senha" : "123Fred"
+}
+
+
+### 
+POST http://localhost:3333/login
+content-type : application/json
+
+
+{
+    "usuarioid" : 1,
+    "nome" : "Lucas Araújo",
+    "login" : "lucascorrea335@hotmail.com",
+    "senha" : "123456"
+}

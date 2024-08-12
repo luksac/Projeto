@@ -1,0 +1,218 @@
+/* styleRestaurant.css */
+/* Estilos Gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    position: relative;
+    min-height: 100vh;
+}
+
+#restaurant-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 10px;
+}
+
+.col-2 {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.col-2:hover {
+    transform: scale(1.03);
+}
+
+.img-restaurant {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+    display: block;
+}
+
+/* Estilos de Texto dentro dos Contêineres */
+.text-rest {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+/* Descrição do Restaurante */
+.text-rest.descricao {
+    font-weight: bold;
+    font-family: 'Georgia', serif; /* Fonte estilo serif */
+    color: #222;
+}
+
+/* Endereço do Restaurante */
+.text-rest.endereco {
+    font-weight: bold;
+    font-family: 'Courier New', monospace; /* Fonte estilo monospace */
+    color: #666;
+}
+
+/* Tipo de Cozinha */
+.text-rest.tipo {
+    font-style: italic;
+    font-family: 'Tahoma', sans-serif; /* Fonte estilo sans-serif */
+    color: #888;
+}
+
+/* Telefone */
+.text-rest.telefone {
+    font-weight: bold;
+    font-family: 'Verdana', sans-serif; /* Fonte estilo sans-serif */
+    color: #d9534f;
+}
+
+#error-message {
+    color: #d9534f;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    background: #f2dede;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+/* Caixa de pesquisa */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#search-box {
+    flex: 1; /* Ocupa o máximo de espaço disponível */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-right: 10px; /* Espaço entre a caixa de pesquisa e o botão */
+}
+
+/* Botão de Logout */
+.button {
+    background-color: #ff4d4d; /* Cor de fundo dos botões */
+    color: #fff; /* Cor do texto dos botões */
+    padding: 10px 20px; /* Espaçamento interno dos botões */
+    border-radius: 4px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+    display: inline-block; /* Para o link comportar-se como um botão */
+}
+
+.button:hover {
+    background-color: #ff6666; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #restaurant-container {
+        justify-content: center;
+    }
+
+    .col-2 {
+        width: 45%;
+        margin-bottom: 10px;
+    }
+
+    .search-container {
+        flex-direction: column; /* Alinha a caixa de pesquisa e o botão verticalmente */
+        align-items: flex-start; /* Alinha os itens ao início */
+    }
+
+    #search-box {
+        margin-right: 0; /* Remove o espaço entre a caixa de pesquisa e o botão */
+        margin-bottom: 10px; /* Espaço abaixo da caixa de pesquisa */
+    }
+}
+
+@media (max-width: 480px) {
+    .col-2 {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.restaurant-info, .dish-info {
+    padding: 20px;
+    background: #fff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-info img, .dish-info img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.dish-info .col-2 {
+    width: 100%;
+    max-width: 300px;
+}
+
+
+/* Define um contêiner flexível para os restaurantes */
+.restaurant-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    gap: 16px; /* Espaçamento entre os itens */
+    justify-content: center; /* Alinha os itens no centro, ajuste conforme necessário */
+}
+
+/* Define o estilo para os contêineres dos restaurantes */
+.restaurant-container a {
+    display: block;
+    width: 100%; /* Faz com que cada item use toda a largura disponível */
+    max-width: 300px; /* Define uma largura máxima para os itens */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit; /* Herda a cor do texto do elemento pai */
+    border: 1px solid #ddd; /* Adiciona uma borda ao redor dos itens */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    padding: 16px; /* Adiciona um padding interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+}
+
+.img-restaurant {
+    width: 100%; /* Faz com que a imagem use toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 4px; /* Adiciona bordas arredondadas às imagens */
+}
+
+.text-rest {
+    margin: 4px 0; /* Adiciona uma margem superior e inferior */
+}
+
+
+

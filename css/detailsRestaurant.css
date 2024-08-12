@@ -1,0 +1,118 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    padding: 10px; /* Reduzido para melhor ajuste dos contêineres menores */
+}
+
+/* Container principal */
+#restaurant-container {
+    max-width: 800px; /* Diminuído */
+    margin: 0 auto;
+    padding: 15px; /* Reduzido */
+    background-color: #fff;
+    border-radius: 6px; /* Diminuído */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Ajustado */
+}
+
+/* Mensagem de erro */
+#error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px; /* Reduzido */
+}
+
+/* Seção do restaurante */
+.restaurant-info {
+    text-align: center;
+    margin-bottom: 30px; /* Reduzido */
+}
+
+.restaurant-info h2 {
+    margin-bottom: 15px; /* Reduzido */
+    font-size: 20px; /* Diminuído */
+    color: #333;
+}
+
+.restaurant-info .text-rest {
+    margin-bottom: 8px; /* Reduzido */
+}
+
+.restaurant-info .img-restaurant {
+    width: 50%; /* Ajusta para a largura do contêiner */
+    height: auto; /* Altura automática */
+    border-radius: 6px; /* Diminuído */
+}
+
+/* Seção dos pratos */
+.dish-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Reduzido */
+    text-align: center;
+}
+
+.dish-info h2 {
+    width: 100%;
+    margin-bottom: 15px; /* Reduzido */
+    font-size: 20px; /* Diminuído */
+    color: #333;
+}
+
+.dish-info .col-2 {
+    flex: 1 1 calc(50% - 15px); /* Ajustado */
+    max-width: calc(50% - 15px); /* Ajustado */
+    background-color: #fff;
+    border-radius: 6px; /* Diminuído */
+    overflow: hidden;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); /* Ajustado */
+}
+
+.dish-info .col-2 img {
+    width: 100%;
+    height: 200px; /* Altura fixa para pratos */
+    object-fit: cover; /* Mantém a proporção da imagem e a preenche */
+}
+
+.dish-info .col-2 p {
+    padding: 8px; /* Reduzido */
+    font-size: 14px; /* Diminuído */
+    color: #555;
+}
+
+.dish-info .col-2 .descricao {
+    font-weight: bold;
+}
+
+.dish-info .col-2 .precos {
+    color: #e74c3c;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .dish-info .col-2 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.restaurant-info .nota {
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+/* Estilo para a estrela */
+.restaurant-info .nota .star {
+    color: #f1c40f; /* Cor amarela */
+    font-size: 18px; /* Tamanho da estrela */
+    vertical-align: middle; /* Alinha a estrela com o texto */
+}
